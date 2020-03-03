@@ -2,7 +2,10 @@
 
 # Strings
 
-if [ $1 = "Roxane" ]
+if [ -z $1 ]
+then
+    echo "No parameter."
+elif [ $1 = "Roxane" ]
 then
     echo "Salut Roxane !"
 elif [ $1 != "zog" ]
