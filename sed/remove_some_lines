@@ -1,0 +1,2 @@
+# To try with sed -f
+3d;5d;8,10d
