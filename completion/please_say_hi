@@ -1,7 +1,5 @@
 #! /bin/bash
 
-# https://iridakos.com/programming/2018/03/01/bash-programmable-completion-tutorial
-
 SCRIPT_NAME=$(basename $0)
 
 helloWorld() {

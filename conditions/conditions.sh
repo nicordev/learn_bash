@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Commands
+
+if [ -n $(echo "1") ] && [ -n $(echo "1") ]
+then
+    echo "true"
+fi
+
+if pwd && echo "2"
+then
+    echo "true"
+fi
+
 # Strings
 
 if [ -z $1 ]
