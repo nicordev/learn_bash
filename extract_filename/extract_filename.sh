@@ -1,6 +1,14 @@
 #! /bin/bash
 
-extractFilename() {
+extractFileNameUsingParameterSubstitution() {
+    echo ${@##*/}
+}
+
+extractFileNameUsingSed() {
+    echo "$@" | sed "s#.*/##"
+}
+
+extractFilenameUsingRegex() {
     if [[ "$1" =~ ([^/]+)$ ]]
     then
         echo "${BASH_REMATCH[1]}"
