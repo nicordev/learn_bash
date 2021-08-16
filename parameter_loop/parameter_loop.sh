@@ -25,9 +25,9 @@ analyseParameters() {
                 shift
             ;;
         esac
-        
+
     done
-    
+
 }
 
 ## Add "" around $@ to handle strings containing spaces correctly.
