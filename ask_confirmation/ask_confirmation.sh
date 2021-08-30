@@ -10,10 +10,13 @@ askConfirmationDefaultYes() {
 
     if [[ ${answer,,} =~ ^(n|no)$ ]]; then
         echo "no"
+
         return 1
     fi
 
     echo "yes"
+
+    return 0
 }
 
 askConfirmationDefaultNo() {
@@ -22,13 +25,21 @@ askConfirmationDefaultNo() {
 
     if [[ ${answer,,} =~ ^(y|yes)$ ]]; then
         echo "yes"
-        return 1
+
+        return 0
     fi
 
     echo "no"
+
+    return 1
 }
 
 while true; do
-    read -p "How old are you? " age
-    askConfirmationDefaultYes || exit
+    echo "Hello world!"
+    askConfirmationDefaultYes || break
+done
+
+while true; do
+    echo "Hello us!"
+    askConfirmationDefaultNo || exit
 done
