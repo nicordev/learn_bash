@@ -42,7 +42,7 @@ decrement() {
 
 }
 
-power() {
+powerOfIntegers() {
     if [ $# -lt 2 ];then
         echo -e "${SCRIPT_NAME} ${FUNCNAME[0]} \e[33mnumber power\e[0m"
 
@@ -50,6 +50,16 @@ power() {
     fi
 
     echo $(($1 ** $2))
+}
+
+powerUsingBc() {
+    if [ $# -lt 2 ];then
+        echo -e "${SCRIPT_NAME} ${FUNCNAME[0]} \e[33mnumber power\e[0m"
+
+        return
+    fi
+
+    bc <<< "scale=10; $1 ^ $2"
 }
 
 _listAvailableFunctions() {
