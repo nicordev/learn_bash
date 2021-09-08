@@ -19,7 +19,10 @@ function deleteTemporaryFile() {
 }
 
 function handleExit() {
-    echo "last code: $?" # last code returned, maximum 195, could come from an exit or a return
+    if [ $? != 0 ]
+    then
+        echo "An error occured. last code: $?" # last code returned, maximum 195, could come from an exit or a return
+    fi
     echo "parameters: $@" # no parameter passed to the function
     deleteTemporaryFile
     countTemporaryFile
