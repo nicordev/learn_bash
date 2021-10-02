@@ -1,0 +1,22 @@
+<?php
+
+class DATABASE_CONFIG {
+    public $default = array(
+        'datasource'  => 'Database/Postgres',
+        'persistent'  => false,
+        'host'        => 'postgres_main',
+        'login'       => 'www-data',
+        'password'    => 'ubitransport',
+        'database'    => 'postgres',
+        'prefix'      => ''
+    );
+    public $test = array(
+        'datasource'  => 'Database/Postgres',
+        'persistent'  => false,
+        'host'        => 'postgres_test',
+        'login'       => 'test',
+        'password'    => 'test',
+        'database'    => 'test',
+        'prefix'      => ''
+    );
+}

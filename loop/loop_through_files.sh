@@ -18,3 +18,11 @@ loopThroughFiles $(pwd)
 echo '
 One liner:'
 for file in *; do echo "$file"; done
+
+echo '
+Temporary files:'
+for dir in /tmp/*/     # list directories in the form "/tmp/dirname/"
+do
+    dir=${dir%*/}      # remove the trailing "/"
+    echo ${dir##*/}    # print everything after the final "/"
+done
