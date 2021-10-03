@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#! /usr/bin/bash
 
 cat << EOF
 The current working directory is: $PWD
@@ -25,4 +25,15 @@ cherry
 orange
 apple
 pear
+EOF
+
+owner='Sarah Vigotte'
+
+cat << EOF
+$owner
+*
+EOF
+
+cat << EOF
+$@
 EOF
