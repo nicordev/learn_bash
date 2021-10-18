@@ -8,7 +8,7 @@ askConfirmationDefaultYes() {
     echo -e "\e[1mContinue?\e[0m [YES/no] "
     read answer
 
-    if [[ ${answer,,} =~ ^(n|no)$ ]]; then
+    if [[ ${answer,,} =~ ^n ]]; then
         echo "no"
 
         return 1
