@@ -16,7 +16,7 @@ analyseParameters() {
                 echo "case 1"
                 shift
             ;;
-            2|3)
+            'hello'|'world')
                 echo "case 2 or 3"
                 shift
             ;;
