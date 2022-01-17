@@ -9,7 +9,7 @@ readEnvFile() {
         return 1
     fi
 
-    cat $1 | sed --quiet "s/^$2=\([^\n]*\)/\1/p" | sed "s/[\"']//g"
+    cat "$1" | sed --quiet "s/^$2=\([^\n#]*\).*/\1/p" | sed "s/[\"']//g"
 }
 
 if [ $# -lt 1 ]; then
